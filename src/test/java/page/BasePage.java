@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class BasePage {
     public WebDriver driver;
@@ -36,5 +37,8 @@ public class BasePage {
         WebElement element = driver.findElement(elementBy);
         element.clear();
         element.sendKeys(text);
+    }
+    public void isElementNotDisplayed(By elementBy) {
+        assertFalse(driver.findElements(elementBy).size() > 0);
     }
 }

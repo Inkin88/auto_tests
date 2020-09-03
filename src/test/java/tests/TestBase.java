@@ -15,12 +15,10 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
     String URL_SITE = "https://mvnrepository.com/";
     WebDriver driver;
-    Main page;
+    public Main page;
     TaskOne taskOne;
-    TaskSix taskSix;
+    public TaskSix taskSix;
 
-
-    @BeforeEach
     public void start() {
         WebDriverManager.operadriver().setup();
         driver = new OperaDriver();
@@ -31,7 +29,6 @@ public class TestBase {
         taskSix = PageFactory.initElements(driver, TaskSix.class);
     }
 
-    @AfterEach
     public void finish() {
         driver.quit();
     }

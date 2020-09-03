@@ -3,7 +3,6 @@ package page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-
 public class TaskSix extends BasePage {
 
     public TaskSix(WebDriver driver) {
@@ -27,6 +26,11 @@ public class TaskSix extends BasePage {
 
     public TaskSix isLoginCorrect() {
         isElementDisplayed(By.linkText("Pobierz plik"));
+        return this;
+    }
+
+    public TaskSix isLoginWrong() {
+        isElementNotDisplayed(By.linkText("Pobierz plik"));
         return this;
     }
 }
