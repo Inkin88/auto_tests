@@ -8,6 +8,7 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.PageFactory;
 import page.Main;
 import page.TaskOne;
+import page.TaskSix;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,6 +17,7 @@ public class TestBase {
     WebDriver driver;
     Main page;
     TaskOne taskOne;
+    TaskSix taskSix;
 
 
     @BeforeEach
@@ -26,6 +28,7 @@ public class TestBase {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         page = PageFactory.initElements(driver, Main.class);
         taskOne = PageFactory.initElements(driver, TaskOne.class);
+        taskSix = PageFactory.initElements(driver, TaskSix.class);
     }
 
     @AfterEach

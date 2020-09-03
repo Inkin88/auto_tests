@@ -8,6 +8,5 @@ public class First extends TestBase {
     public void firstTest() {
         page.goTo().chooseTask("1");
         taskOne.checkPageIsCorrect();
-
     }
 }
